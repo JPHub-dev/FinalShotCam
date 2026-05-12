@@ -1,41 +1,31 @@
-hero-right{
-  width:2304px;
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
 
-  display:flex;
-  justify-content:center;
-}
+  html{
+    scroll-behavior:smooth;
+  }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  body{
+    background:#F7F7F7;
+    overflow-x:hidden;
+    font-family:'Kulim Park', sans-serif;
+  }
 
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#F7F7F7;
-  overflow-x:hidden;
-  font-family:'Kulim Park', sans-serif;
-}
-
-/* ========================================
-   HEADER
-======================================== */
+  /* ================= HEADER ================= */
 
 .header{
-  width:1180px;
+  width:95%;
+  max-width:1172px;
   height:61px;
 
   margin:30px auto;
 
-  background:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.6);
 
   border-radius:20px;
-
-  border:1px solid #DADADA;
 
   backdrop-filter:blur(10px);
 
@@ -43,478 +33,764 @@ body{
   align-items:center;
   justify-content:space-between;
 
-  padding:0 28px;
+  padding:0 20px;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+  position:relative;
+  z-index:100;
 }
+
+/* LOGO */
 
 .logo{
-  font-family:'Geologica', sans-serif;
-  font-size:22px;
-  font-weight:900;
+  font-family:'Poppins', sans-serif;
 
-  color:#6E5BFF;
+  font-weight:700;
+  font-size:22px;
+
+  color:#6c63ff;
+
+  flex-shrink:0;
 }
+
+/* RIGHT SIDE */
+
+.right-section{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* NAV */
 
 .nav{
   display:flex;
-  gap:35px;
+  align-items:center;
+  gap:20px;
 }
 
 .nav a{
   text-decoration:none;
 
-  font-size:15px;
   color:#777;
 
+  font-size:16px;
+  font-family:'Poppins', sans-serif;
+
   transition:0.3s;
+
+  white-space:nowrap;
 }
 
 .nav a:hover{
-  color:black;
+  color:#000;
 }
 
-/* ========================================
-   HERO SECTION
-======================================== */
+/* GITHUB */
 
-.hero{
-  width:1180px;
+.github{
+  width:35px;
+  height:35px;
 
-  margin:90px auto 0 auto;
+  border-radius:50%;
+  border:1px solid #ccc;
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.hero-left{
-  width:500px;
-}
-
-.hero-left h1{
-  font-family:'Geologica', sans-serif;
-  font-size:58px;
-  line-height:72px;
-  font-weight:900;
-
-  color:black;
-}
-
-.hero-left h1 span{
-  color:#7B4DFF;
-}
-
-.hero-left p{
-  margin-top:25px;
-
-  font-size:18px;
-  line-height:32px;
-  font-weight:600;
-
-  color:#333;
-}
-
-/* ========================================
-   GITHUB BUTTON
-======================================== */
-
-.github-btn{
-  width:240px;
-  height:72px;
-
-  margin-top:30px;
-
-  background:black;
-
-  border-radius:90px;
-
-  border:3px solid white;
+  background:white;
 
   display:flex;
   align-items:center;
-  gap:14px;
-
-  padding:0 20px;
-
-  cursor:pointer;
-
-  box-shadow:0 5px 15px rgba(0,0,0,0.15);
-}
-
-.git-icon{
-  width:38px;
-}
-
-.git-text{
-  display:flex;
-  flex-direction:column;
-}
-
-.git-text span{
-  font-family:'Roboto', sans-serif;
-  font-size:14px;
-  font-weight:300;
-  margin-bottom: 10px;
-
-  color:white;
-}
-
-.git-text img{
-  width:90px;
-  
-}
-
-/* ========================================
-   RIGHT COLLAGE
-======================================== */
-
-.hero-right{
-  width:520px;
-
-  display:flex;
   justify-content:center;
+
+  flex-shrink:0;
 }
 
-.hero-collage{
-  width:100%;
+.github img{
+  width:18px;
+  height:18px;
+
   object-fit:contain;
-}
-
-/* ========================================
-   FLOATING BOX
-======================================== */
-
-.floating-box{
-  width:600px;
-  height:130px;
-
-  background:white;
-
-  border:3px solid #B9B5B2;
-
-  border-radius:80px;
-
-  margin:70px auto -65px auto;
-
-  position:relative;
-  z-index:5;
-}
-
-/* ========================================
-   BEST SECTION
-======================================== */
-
-.best-section{
-  background:#B8B2FF;
-
-  padding-top:120px;
-  padding-bottom:90px;
-
-  border-radius:18px;
-}
-
-.best-section h2{
-  text-align:center;
-
-  font-family:'Geologica', sans-serif;
-  font-size:52px;
-  font-weight:900;
-
-  color:white;
-
-  -webkit-text-stroke:1px #8783FF;
-}
-
-.best-section p{
-  width:900px;
-
-  margin:28px auto 0 auto;
-
-  text-align:center;
-
-  font-size:18px;
-  line-height:32px;
-  font-weight:600;
-
-  color:#222;
-}
-
-/* ========================================
-   CARDS
-======================================== */
-
-.cards{
-  margin-top:55px;
-
-  display:flex;
-  justify-content:center;
-  gap:24px;
-}
-
-.card{
-  width:180px;
-  height:290px;
-
-  border:3px solid #8783FF;
-
-  border-radius:24px;
-
-  overflow:hidden;
-
-  transform:rotate(-4deg);
-
-  background:white;
-}
-
-.card:nth-child(2){
-  transform:rotate(5deg);
-}
-
-.card:nth-child(3){
-  transform:rotate(-6deg);
-}
-
-.card:nth-child(4){
-  transform:rotate(4deg);
-}
-
-.card img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-}
-
-.github-large{
-  width:90px;
 
   display:block;
-
-  margin:45px auto 0 auto;
 }
 
-/* ========================================
-   FAQ
-======================================== */
+/* MOBILE */
 
-.faq-section{
-  width:1000px;
+@media(max-width:768px){
 
-  margin:120px auto;
+  .header{
+    height:auto;
+
+    padding:14px 20px;
+
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+  .right-section{
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 }
 
-.faq-section h2{
-  text-align:center;
+  /* GITHUB */
 
-  font-family:'Geologica', sans-serif;
-  font-size:42px;
-  font-weight:900;
+  .header-github{
+    width:35px;
+    height:35px;
 
-  margin-bottom:60px;
-}
+    border-radius:50%;
+    border:1px solid #ccc;
 
-.faq-item{
-  margin-bottom:30px;
-}
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-.faq-question{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    background:white;
+  }
 
-  padding-bottom:12px;
+  .header-github img{
+    width:18px;
+    height:18px;
 
-  border-bottom:2px solid rgba(0,0,0,0.08);
-}
+    object-fit:contain;
 
-.faq-question h3{
-  width:85%;
+    display:block;
+  }
 
-  font-size:24px;
-  line-height:36px;
-  font-weight:700;
-}
+  /* HERO */
 
-.faq-btn{
-  width:45px;
-  height:45px;
+  .hero{
+    width:1180px;
 
-  border:2px solid black;
-  border-radius:10px;
+    margin:90px auto 0 auto;
 
-  background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
 
-  font-size:30px;
+  .hero-left{
+    width:520px;
+  }
 
-  cursor:pointer;
-}
+  .hero-left h1{
+    font-family:'Geologica', sans-serif;
+    font-size:62px;
+    line-height:76px;
+    font-weight:900;
 
-.faq-answer{
-  display:none;
+    color:black;
+  }
 
-  margin-top:15px;
+  .hero-left h1 span{
+    color:#7B4DFF;
+  }
 
-  font-size:18px;
-  line-height:30px;
+  .hero-left p{
+    margin-top:28px;
 
-  color:#444;
-}
+    font-size:18px;
+    line-height:34px;
+    font-weight:600;
 
-.faq-answer.show{
-  display:block;
-}
+    color:#333;
+  }
 
-/* ========================================
-   TESTIMONIAL
-======================================== */
+  /* BUTTON */
 
-.testimonial{
-  background:black;
+  .hero-buttons{
+    margin-top:40px;
+  }
 
-  padding:100px 0;
+  /* GITHUB BUTTON */
 
-  color:white;
-}
+  .github-btn{
+    width:250px;
+    height:96px;
 
-.testimonial h2{
-  text-align:center;
+    background:black;
 
-  font-family:'Geologica', sans-serif;
-  font-size:52px;
-  font-weight:900;
-}
+    border:none;
+    border-radius:999px;
 
-.rating-row{
-  margin-top:40px;
+    cursor:pointer;
 
-  display:flex;
-  justify-content:center;
-  gap:80px;
+    overflow:hidden;
 
-  font-size:18px;
-}
+    transition:0.25s ease;
 
-.rating-row span{
-  color:#BEBEBE;
-}
+    box-shadow:
+    0 6px 0 #726BFF,
+    0 12px 25px rgba(0,0,0,0.15);
+  }
 
-.testimonial-box{
-  position:relative;
+  .github-btn:hover{
+    transform:translateY(-4px);
+  }
 
-  width:850px;
+  .github-inner{
+    width:100%;
+    height:100%;
 
-  margin:90px auto 0 auto;
+    display:flex;
+    align-items:center;
+    gap:20px;
 
-  text-align:center;
-}
+    padding:0 30px;
+  }
 
-.blur-glow{
-  position:absolute;
+  .git-icon{
+    width:58px;
+    height:58px;
 
-  width:400px;
-  height:400px;
+    object-fit:contain;
 
-  left:50%;
-  top:50%;
+    flex-shrink:0;
+  }
 
-  transform:translate(-50%,-50%);
+  .git-text{
+    display:flex;
+    flex-direction:column;
+  }
 
-  background:radial-gradient(
-    circle,
-    rgba(255,170,255,0.8),
-    rgba(100,200,255,0.35),
-    transparent
-  );
+  .git-text span{
+    font-family:'Roboto', sans-serif;
+    font-size:15px;
+    font-weight:300;
 
-  filter:blur(100px);
-}
+    color:white;
 
-.testimonial-box p{
-  position:relative;
-  z-index:2;
+    letter-spacing:1px;
 
-  font-size:32px;
-  line-height:55px;
+    margin-bottom:4px;
+  }
 
-  font-style:italic;
-  font-weight:700;
-}
+  .git-text img{
+    width:150px;
+  }
 
-.testimonial-box h4{
-  margin-top:30px;
+  /* HERO RIGHT */
 
-  position:relative;
-  z-index:2;
+  .hero-right{
+    width:760px;
 
-  font-size:22px;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
 
-/* ========================================
-   FOOTER
-======================================== */
+  .hero-collage{
+    width:100%;
+    object-fit:contain;
 
-.footer{
-  background:#8783FF;
+    transform:scale(1.15);
+  }
 
-  padding:80px 120px;
+  /* FLOATING BOX */
 
-  display:flex;
-  justify-content:space-between;
-}
+  .floating-box{
+    width:620px;
+    height:130px;
 
-.footer-left{
-  width:420px;
-}
+    background:white;
 
-.footer-left h2{
-  font-family:'Geologica', sans-serif;
-  font-size:38px;
-  font-weight:900;
+    border:3px solid #B9B5B2;
 
-  color:white;
-}
+    border-radius:90px;
 
-.footer-left p{
-  margin-top:18px;
+    margin:70px auto -65px auto;
 
-  font-size:16px;
-  line-height:28px;
+    position:relative;
+    z-index:10;
+  }
 
-  color:white;
-}
+  /* BEST SECTION */
 
-/* SOCIALS */
+  .best-section{
+    background:#B8B2FF;
 
-.socials{
-  margin-top:30px;
+    padding-top:130px;
+    padding-bottom:100px;
 
-  display:flex;
-  gap:18px;
-}
+    border-radius:24px;
+  }
 
-.socials img{
-  width:32px;
-  cursor:pointer;
-}
+  .best-section h2{
+    text-align:center;
 
-/* FEATURES */
+    font-family:'Geologica', sans-serif;
+    font-size:56px;
+    font-weight:900;
 
-.footer-features{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
+    color:white;
 
-.footer-features h3{
-  font-family:'Geologica', sans-serif;
-  font-size:28px;
+    -webkit-text-stroke:1px #8783FF;
+  }
 
-  color:white;
-}
+  .best-section p{
+    width:920px;
 
-.footer-features a{
-  text-decoration:none;
+    margin:30px auto 0 auto;
 
-  font-size:18px;
+    text-align:center;
 
-  color:white;
-}
+    font-size:18px;
+    line-height:34px;
+    font-weight:600;
+  }
+
+  /* CARDS */
+
+  .cards{
+    margin-top:70px;
+
+    display:flex;
+    justify-content:center;
+    gap:34px;
+  }
+
+  .card{
+    width:290px;
+    height:450px;
+
+    border:3px solid #8783FF;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:white;
+
+    transition:0.35s;
+  }
+
+  .card:nth-child(1){
+    transform:rotate(-6deg);
+  }
+
+  .card:nth-child(2){
+    transform:rotate(5deg);
+  }
+
+  .card:nth-child(3){
+    transform:rotate(-5deg);
+  }
+
+  .card:nth-child(4){
+    transform:rotate(6deg);
+  }
+
+  .card:hover{
+    transform:translateY(-10px) scale(1.03);
+  }
+
+  .card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+  }
+
+  .github-large{
+    width:95px;
+
+    display:block;
+
+    margin:50px auto 0 auto;
+  }
+
+  /* FAQ */
+
+  .faq-section{
+    width:1000px;
+
+    margin:120px auto;
+
+    position:relative;
+  }
+
+  .faq-section::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(
+      circle,
+      rgba(13,17,100,0.7),
+      rgba(100,13,95,0.65),
+      rgba(234,34,100,0.55),
+      rgba(247,141,96,0.45),
+      transparent
+    );
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    filter:blur(90px);
+
+    z-index:-1;
+  }
+
+  .faq-section h2{
+    text-align:center;
+
+    font-family:'Geologica', sans-serif;
+    font-size:44px;
+    font-weight:900;
+
+    margin-bottom:60px;
+  }
+
+  .faq-item{
+    margin-bottom:28px;
+
+    background:rgba(255,255,255,0.72);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.06);
+  }
+
+  .faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .faq-question h3{
+    width:85%;
+
+    font-size:24px;
+    line-height:38px;
+    font-weight:700;
+  }
+
+  .faq-btn{
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:black;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+  }
+
+  .faq-btn:hover{
+    transform:scale(1.08);
+  }
+
+  /* FAQ ANIMATION */
+
+  .faq-answer{
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(-10px);
+
+    transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+
+    font-size:18px;
+    line-height:32px;
+
+    color:#444;
+  }
+
+  .faq-answer.show{
+    max-height:300px;
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    margin-top:18px;
+  }
+
+  /* TESTIMONIAL */
+
+  .testimonial{
+    background:#F7F7F7;
+
+    padding:110px 0;
+
+    color:black;
+
+    overflow:hidden;
+  }
+
+  .testimonial h2{
+    text-align:center;
+
+    font-family:'Geologica', sans-serif;
+    font-size:54px;
+    font-weight:900;
+
+    margin-bottom:45px;
+  }
+
+  /* RATINGS */
+
+  .rating-row{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+
+    margin-bottom:80px;
+
+    flex-wrap:wrap;
+  }
+
+  .rating-item{
+    width:220px;
+
+    text-align:center;
+
+    padding:24px;
+
+    border-radius:24px;
+
+    color:white;
+
+    font-size:24px;
+    font-weight:700;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,0.08);
+  }
+
+  .rating-item:hover{
+    transform:translateY(-8px);
+  }
+
+  .rating-item:nth-child(1){
+    background:linear-gradient(135deg,#0D1164,#4355FF);
+  }
+
+  .rating-item:nth-child(2){
+    background:linear-gradient(135deg,#640D5F,#D916BA);
+  }
+
+  .rating-item:nth-child(3){
+    background:linear-gradient(135deg,#EA2264,#FF6C97);
+  }
+
+  .rating-item:nth-child(4){
+    background:linear-gradient(135deg,#F78D60,#FFB183);
+  }
+
+  .rating-item span{
+    display:block;
+
+    margin-top:10px;
+
+    font-size:16px;
+
+    color:white;
+  }
+
+  /* TESTIMONIAL SLIDER */
+
+  .testimonial-slider{
+    width:100%;
+    overflow:hidden;
+  }
+
+  .testimonial-track{
+    display:flex;
+
+    width:300%;
+
+    animation:slideTestimonial 15s infinite;
+  }
+
+  @keyframes slideTestimonial{
+
+    0%{
+      transform:translateX(0%);
+    }
+
+    30%{
+      transform:translateX(0%);
+    }
+
+    35%{
+      transform:translateX(-33.3%);
+    }
+
+    65%{
+      transform:translateX(-33.3%);
+    }
+
+    70%{
+      transform:translateX(-66.6%);
+    }
+
+    95%{
+      transform:translateX(-66.6%);
+    }
+
+    100%{
+      transform:translateX(0%);
+    }
+  }
+
+  .testimonial-box{
+    width:100vw;
+
+    position:relative;
+
+    text-align:center;
+
+    padding:0 140px;
+  }
+
+  .blur-glow{
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+    radial-gradient(
+      circle,
+      rgba(123,77,255,0.4),
+      rgba(255,120,180,0.25),
+      transparent
+    );
+
+    filter:blur(110px);
+  }
+
+  .testimonial-box p{
+    position:relative;
+    z-index:2;
+
+    width:850px;
+
+    margin:auto;
+
+    font-size:34px;
+    line-height:60px;
+
+    font-style:italic;
+    font-weight:700;
+
+    color:#111;
+  }
+
+  .testimonial-box h4{
+    position:relative;
+    z-index:2;
+
+    margin-top:30px;
+
+    font-size:24px;
+
+    color:#555;
+  }
+
+  /* FOOTER */
+
+  .footer{
+    background:#8783FF;
+
+    padding:80px 120px;
+
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .footer-left{
+    width:420px;
+  }
+
+  .footer-left h2{
+    font-family:'Geologica', sans-serif;
+    font-size:38px;
+    font-weight:900;
+
+    color:white;
+  }
+
+  .footer-left p{
+    margin-top:18px;
+
+    font-size:16px;
+    line-height:28px;
+
+    color:white;
+  }
+
+  .socials{
+    margin-top:30px;
+
+    display:flex;
+    gap:18px;
+  }
+
+  .socials img{
+    width:32px;
+    cursor:pointer;
+  }
+
+  .footer-features{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .footer-features h3{
+    font-family:'Geologica', sans-serif;
+    font-size:28px;
+
+    color:white;
+  }
+
+  .footer-features a{
+    text-decoration:none;
+
+    font-size:18px;
+
+    color:white;
+  }
