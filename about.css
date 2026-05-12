@@ -1,0 +1,520 @@
+hero-right{
+  width:2304px;
+
+  display:flex;
+  justify-content:center;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#F7F7F7;
+  overflow-x:hidden;
+  font-family:'Kulim Park', sans-serif;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header{
+  width:1180px;
+  height:61px;
+
+  margin:30px auto;
+
+  background:rgba(255,255,255,0.7);
+
+  border-radius:20px;
+
+  border:1px solid #DADADA;
+
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 28px;
+}
+
+.logo{
+  font-family:'Geologica', sans-serif;
+  font-size:22px;
+  font-weight:900;
+
+  color:#6E5BFF;
+}
+
+.nav{
+  display:flex;
+  gap:35px;
+}
+
+.nav a{
+  text-decoration:none;
+
+  font-size:15px;
+  color:#777;
+
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:black;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero{
+  width:1180px;
+
+  margin:90px auto 0 auto;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.hero-left{
+  width:500px;
+}
+
+.hero-left h1{
+  font-family:'Geologica', sans-serif;
+  font-size:58px;
+  line-height:72px;
+  font-weight:900;
+
+  color:black;
+}
+
+.hero-left h1 span{
+  color:#7B4DFF;
+}
+
+.hero-left p{
+  margin-top:25px;
+
+  font-size:18px;
+  line-height:32px;
+  font-weight:600;
+
+  color:#333;
+}
+
+/* ========================================
+   GITHUB BUTTON
+======================================== */
+
+.github-btn{
+  width:240px;
+  height:72px;
+
+  margin-top:30px;
+
+  background:black;
+
+  border-radius:90px;
+
+  border:3px solid white;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  padding:0 20px;
+
+  cursor:pointer;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.git-icon{
+  width:38px;
+}
+
+.git-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.git-text span{
+  font-family:'Roboto', sans-serif;
+  font-size:14px;
+  font-weight:300;
+  margin-bottom: 10px;
+
+  color:white;
+}
+
+.git-text img{
+  width:90px;
+  
+}
+
+/* ========================================
+   RIGHT COLLAGE
+======================================== */
+
+.hero-right{
+  width:520px;
+
+  display:flex;
+  justify-content:center;
+}
+
+.hero-collage{
+  width:100%;
+  object-fit:contain;
+}
+
+/* ========================================
+   FLOATING BOX
+======================================== */
+
+.floating-box{
+  width:600px;
+  height:130px;
+
+  background:white;
+
+  border:3px solid #B9B5B2;
+
+  border-radius:80px;
+
+  margin:70px auto -65px auto;
+
+  position:relative;
+  z-index:5;
+}
+
+/* ========================================
+   BEST SECTION
+======================================== */
+
+.best-section{
+  background:#B8B2FF;
+
+  padding-top:120px;
+  padding-bottom:90px;
+
+  border-radius:18px;
+}
+
+.best-section h2{
+  text-align:center;
+
+  font-family:'Geologica', sans-serif;
+  font-size:52px;
+  font-weight:900;
+
+  color:white;
+
+  -webkit-text-stroke:1px #8783FF;
+}
+
+.best-section p{
+  width:900px;
+
+  margin:28px auto 0 auto;
+
+  text-align:center;
+
+  font-size:18px;
+  line-height:32px;
+  font-weight:600;
+
+  color:#222;
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards{
+  margin-top:55px;
+
+  display:flex;
+  justify-content:center;
+  gap:24px;
+}
+
+.card{
+  width:180px;
+  height:290px;
+
+  border:3px solid #8783FF;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  transform:rotate(-4deg);
+
+  background:white;
+}
+
+.card:nth-child(2){
+  transform:rotate(5deg);
+}
+
+.card:nth-child(3){
+  transform:rotate(-6deg);
+}
+
+.card:nth-child(4){
+  transform:rotate(4deg);
+}
+
+.card img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.github-large{
+  width:90px;
+
+  display:block;
+
+  margin:45px auto 0 auto;
+}
+
+/* ========================================
+   FAQ
+======================================== */
+
+.faq-section{
+  width:1000px;
+
+  margin:120px auto;
+}
+
+.faq-section h2{
+  text-align:center;
+
+  font-family:'Geologica', sans-serif;
+  font-size:42px;
+  font-weight:900;
+
+  margin-bottom:60px;
+}
+
+.faq-item{
+  margin-bottom:30px;
+}
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding-bottom:12px;
+
+  border-bottom:2px solid rgba(0,0,0,0.08);
+}
+
+.faq-question h3{
+  width:85%;
+
+  font-size:24px;
+  line-height:36px;
+  font-weight:700;
+}
+
+.faq-btn{
+  width:45px;
+  height:45px;
+
+  border:2px solid black;
+  border-radius:10px;
+
+  background:white;
+
+  font-size:30px;
+
+  cursor:pointer;
+}
+
+.faq-answer{
+  display:none;
+
+  margin-top:15px;
+
+  font-size:18px;
+  line-height:30px;
+
+  color:#444;
+}
+
+.faq-answer.show{
+  display:block;
+}
+
+/* ========================================
+   TESTIMONIAL
+======================================== */
+
+.testimonial{
+  background:black;
+
+  padding:100px 0;
+
+  color:white;
+}
+
+.testimonial h2{
+  text-align:center;
+
+  font-family:'Geologica', sans-serif;
+  font-size:52px;
+  font-weight:900;
+}
+
+.rating-row{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:80px;
+
+  font-size:18px;
+}
+
+.rating-row span{
+  color:#BEBEBE;
+}
+
+.testimonial-box{
+  position:relative;
+
+  width:850px;
+
+  margin:90px auto 0 auto;
+
+  text-align:center;
+}
+
+.blur-glow{
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  background:radial-gradient(
+    circle,
+    rgba(255,170,255,0.8),
+    rgba(100,200,255,0.35),
+    transparent
+  );
+
+  filter:blur(100px);
+}
+
+.testimonial-box p{
+  position:relative;
+  z-index:2;
+
+  font-size:32px;
+  line-height:55px;
+
+  font-style:italic;
+  font-weight:700;
+}
+
+.testimonial-box h4{
+  margin-top:30px;
+
+  position:relative;
+  z-index:2;
+
+  font-size:22px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer{
+  background:#8783FF;
+
+  padding:80px 120px;
+
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-left{
+  width:420px;
+}
+
+.footer-left h2{
+  font-family:'Geologica', sans-serif;
+  font-size:38px;
+  font-weight:900;
+
+  color:white;
+}
+
+.footer-left p{
+  margin-top:18px;
+
+  font-size:16px;
+  line-height:28px;
+
+  color:white;
+}
+
+/* SOCIALS */
+
+.socials{
+  margin-top:30px;
+
+  display:flex;
+  gap:18px;
+}
+
+.socials img{
+  width:32px;
+  cursor:pointer;
+}
+
+/* FEATURES */
+
+.footer-features{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.footer-features h3{
+  font-family:'Geologica', sans-serif;
+  font-size:28px;
+
+  color:white;
+}
+
+.footer-features a{
+  text-decoration:none;
+
+  font-size:18px;
+
+  color:white;
+}
