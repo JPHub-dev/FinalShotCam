@@ -1,0 +1,796 @@
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    background:#F7F7F7;
+    overflow-x:hidden;
+    font-family:'Kulim Park', sans-serif;
+  }
+
+  /* ================= HEADER ================= */
+
+.header{
+  width:95%;
+  max-width:1172px;
+  height:61px;
+
+  margin:30px auto;
+
+  background:rgba(255,255,255,0.6);
+
+  border-radius:20px;
+
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 20px;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+  position:relative;
+  z-index:100;
+}
+
+/* LOGO */
+
+.logo{
+  font-family:'Poppins', sans-serif;
+
+  font-weight:700;
+  font-size:22px;
+
+  color:#6c63ff;
+
+  flex-shrink:0;
+}
+
+/* RIGHT SIDE */
+
+.right-section{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* NAV */
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+
+  color:#777;
+
+  font-size:16px;
+  font-family:'Poppins', sans-serif;
+
+  transition:0.3s;
+
+  white-space:nowrap;
+}
+
+.nav a:hover{
+  color:#000;
+}
+
+/* GITHUB */
+
+.github{
+  width:35px;
+  height:35px;
+
+  border-radius:50%;
+  border:1px solid #ccc;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.github img{
+  width:18px;
+  height:18px;
+
+  object-fit:contain;
+
+  display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .header{
+    height:auto;
+
+    padding:14px 20px;
+
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+  .right-section{
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+}
+
+  /* GITHUB */
+
+  .header-github{
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+    border:1px solid #ccc;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:white;
+  }
+
+  .header-github img{
+    width:18px;
+    height:18px;
+
+    object-fit:contain;
+
+    display:block;
+  }
+
+  /* HERO */
+
+  .hero{
+    width:1180px;
+
+    margin:90px auto 0 auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .hero-left{
+    width:520px;
+  }
+
+  .hero-left h1{
+    font-family:'Geologica', sans-serif;
+    font-size:62px;
+    line-height:76px;
+    font-weight:900;
+
+    color:black;
+  }
+
+  .hero-left h1 span{
+    color:#7B4DFF;
+  }
+
+  .hero-left p{
+    margin-top:28px;
+
+    font-size:18px;
+    line-height:34px;
+    font-weight:600;
+
+    color:#333;
+  }
+
+  /* BUTTON */
+
+  .hero-buttons{
+    margin-top:40px;
+  }
+
+  /* GITHUB BUTTON */
+
+  .github-btn{
+    width:250px;
+    height:96px;
+
+    background:black;
+
+    border:none;
+    border-radius:999px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:0.25s ease;
+
+    box-shadow:
+    0 6px 0 #726BFF,
+    0 12px 25px rgba(0,0,0,0.15);
+  }
+
+  .github-btn:hover{
+    transform:translateY(-4px);
+  }
+
+  .github-inner{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:0 30px;
+  }
+
+  .git-icon{
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+  }
+
+  .git-text{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .git-text span{
+    font-family:'Roboto', sans-serif;
+    font-size:15px;
+    font-weight:300;
+
+    color:white;
+
+    letter-spacing:1px;
+
+    margin-bottom:4px;
+  }
+
+  .git-text img{
+    width:150px;
+  }
+
+  /* HERO RIGHT */
+
+  .hero-right{
+    width:760px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .hero-collage{
+    width:100%;
+    object-fit:contain;
+
+    transform:scale(1.15);
+  }
+
+  /* FLOATING BOX */
+
+  .floating-box{
+    width:620px;
+    height:130px;
+
+    background:white;
+
+    border:3px solid #B9B5B2;
+
+    border-radius:90px;
+
+    margin:70px auto -65px auto;
+
+    position:relative;
+    z-index:10;
+  }
+
+  /* BEST SECTION */
+
+  .best-section{
+    background:#B8B2FF;
+
+    padding-top:130px;
+    padding-bottom:100px;
+
+    border-radius:24px;
+  }
+
+  .best-section h2{
+    text-align:center;
+
+    font-family:'Geologica', sans-serif;
+    font-size:56px;
+    font-weight:900;
+
+    color:white;
+
+    -webkit-text-stroke:1px #8783FF;
+  }
+
+  .best-section p{
+    width:920px;
+
+    margin:30px auto 0 auto;
+
+    text-align:center;
+
+    font-size:18px;
+    line-height:34px;
+    font-weight:600;
+  }
+
+  /* CARDS */
+
+  .cards{
+    margin-top:70px;
+
+    display:flex;
+    justify-content:center;
+    gap:34px;
+  }
+
+  .card{
+    width:290px;
+    height:450px;
+
+    border:3px solid #8783FF;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:white;
+
+    transition:0.35s;
+  }
+
+  .card:nth-child(1){
+    transform:rotate(-6deg);
+  }
+
+  .card:nth-child(2){
+    transform:rotate(5deg);
+  }
+
+  .card:nth-child(3){
+    transform:rotate(-5deg);
+  }
+
+  .card:nth-child(4){
+    transform:rotate(6deg);
+  }
+
+  .card:hover{
+    transform:translateY(-10px) scale(1.03);
+  }
+
+  .card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+  }
+
+  .github-large{
+    width:95px;
+
+    display:block;
+
+    margin:50px auto 0 auto;
+  }
+
+  /* FAQ */
+
+  .faq-section{
+    width:1000px;
+
+    margin:120px auto;
+
+    position:relative;
+  }
+
+  .faq-section::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(
+      circle,
+      rgba(13,17,100,0.7),
+      rgba(100,13,95,0.65),
+      rgba(234,34,100,0.55),
+      rgba(247,141,96,0.45),
+      transparent
+    );
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    filter:blur(90px);
+
+    z-index:-1;
+  }
+
+  .faq-section h2{
+    text-align:center;
+
+    font-family:'Geologica', sans-serif;
+    font-size:44px;
+    font-weight:900;
+
+    margin-bottom:60px;
+  }
+
+  .faq-item{
+    margin-bottom:28px;
+
+    background:rgba(255,255,255,0.72);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.06);
+  }
+
+  .faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .faq-question h3{
+    width:85%;
+
+    font-size:24px;
+    line-height:38px;
+    font-weight:700;
+  }
+
+  .faq-btn{
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:black;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+  }
+
+  .faq-btn:hover{
+    transform:scale(1.08);
+  }
+
+  /* FAQ ANIMATION */
+
+  .faq-answer{
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(-10px);
+
+    transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+
+    font-size:18px;
+    line-height:32px;
+
+    color:#444;
+  }
+
+  .faq-answer.show{
+    max-height:300px;
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    margin-top:18px;
+  }
+
+  /* TESTIMONIAL */
+
+  .testimonial{
+    background:#F7F7F7;
+
+    padding:110px 0;
+
+    color:black;
+
+    overflow:hidden;
+  }
+
+  .testimonial h2{
+    text-align:center;
+
+    font-family:'Geologica', sans-serif;
+    font-size:54px;
+    font-weight:900;
+
+    margin-bottom:45px;
+  }
+
+  /* RATINGS */
+
+  .rating-row{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+
+    margin-bottom:80px;
+
+    flex-wrap:wrap;
+  }
+
+  .rating-item{
+    width:220px;
+
+    text-align:center;
+
+    padding:24px;
+
+    border-radius:24px;
+
+    color:white;
+
+    font-size:24px;
+    font-weight:700;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,0.08);
+  }
+
+  .rating-item:hover{
+    transform:translateY(-8px);
+  }
+
+  .rating-item:nth-child(1){
+    background:linear-gradient(135deg,#0D1164,#4355FF);
+  }
+
+  .rating-item:nth-child(2){
+    background:linear-gradient(135deg,#640D5F,#D916BA);
+  }
+
+  .rating-item:nth-child(3){
+    background:linear-gradient(135deg,#EA2264,#FF6C97);
+  }
+
+  .rating-item:nth-child(4){
+    background:linear-gradient(135deg,#F78D60,#FFB183);
+  }
+
+  .rating-item span{
+    display:block;
+
+    margin-top:10px;
+
+    font-size:16px;
+
+    color:white;
+  }
+
+  /* TESTIMONIAL SLIDER */
+
+  .testimonial-slider{
+    width:100%;
+    overflow:hidden;
+  }
+
+  .testimonial-track{
+    display:flex;
+
+    width:300%;
+
+    animation:slideTestimonial 15s infinite;
+  }
+
+  @keyframes slideTestimonial{
+
+    0%{
+      transform:translateX(0%);
+    }
+
+    30%{
+      transform:translateX(0%);
+    }
+
+    35%{
+      transform:translateX(-33.3%);
+    }
+
+    65%{
+      transform:translateX(-33.3%);
+    }
+
+    70%{
+      transform:translateX(-66.6%);
+    }
+
+    95%{
+      transform:translateX(-66.6%);
+    }
+
+    100%{
+      transform:translateX(0%);
+    }
+  }
+
+  .testimonial-box{
+    width:100vw;
+
+    position:relative;
+
+    text-align:center;
+
+    padding:0 140px;
+  }
+
+  .blur-glow{
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+    radial-gradient(
+      circle,
+      rgba(123,77,255,0.4),
+      rgba(255,120,180,0.25),
+      transparent
+    );
+
+    filter:blur(110px);
+  }
+
+  .testimonial-box p{
+    position:relative;
+    z-index:2;
+
+    width:850px;
+
+    margin:auto;
+
+    font-size:34px;
+    line-height:60px;
+
+    font-style:italic;
+    font-weight:700;
+
+    color:#111;
+  }
+
+  .testimonial-box h4{
+    position:relative;
+    z-index:2;
+
+    margin-top:30px;
+
+    font-size:24px;
+
+    color:#555;
+  }
+
+  /* FOOTER */
+
+  .footer{
+    background:#8783FF;
+
+    padding:80px 120px;
+
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .footer-left{
+    width:420px;
+  }
+
+  .footer-left h2{
+    font-family:'Geologica', sans-serif;
+    font-size:38px;
+    font-weight:900;
+
+    color:white;
+  }
+
+  .footer-left p{
+    margin-top:18px;
+
+    font-size:16px;
+    line-height:28px;
+
+    color:white;
+  }
+
+  .socials{
+    margin-top:30px;
+
+    display:flex;
+    gap:18px;
+  }
+
+  .socials img{
+    width:32px;
+    cursor:pointer;
+  }
+
+  .footer-features{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .footer-features h3{
+    font-family:'Geologica', sans-serif;
+    font-size:28px;
+
+    color:white;
+  }
+
+  .footer-features a{
+    text-decoration:none;
+
+    font-size:18px;
+
+    color:white;
+  }
