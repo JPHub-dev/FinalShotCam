@@ -1,0 +1,12 @@
+-- Create the database and users table for auth
+CREATE DATABASE IF NOT EXISTS finalshoot CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE finalshoot;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

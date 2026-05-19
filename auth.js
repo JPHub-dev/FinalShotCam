@@ -64,12 +64,44 @@
       });
     });
 
-    // demo form handlers
+    // auth form handlers
     const login = document.getElementById('loginForm');
-    if(login) login.addEventListener('submit', (e)=>{ e.preventDefault(); alert('Logged in (demo)'); });
+    if (login) {
+      login.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const formData = new FormData(login);
+        const response = await fetch('database.php?action=login', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+        if (response.ok && result.success) {
+          alert(result.message || 'Logged in successfully');
+          window.location.href = 'index.html';
+        } else {
+          alert(result.error || 'Login failed');
+        }
+      });
+    }
 
     const signup = document.getElementById('signupForm');
-    if(signup) signup.addEventListener('submit', (e)=>{ e.preventDefault(); alert('Account created (demo)'); });
+    if (signup) {
+      signup.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const formData = new FormData(signup);
+        const response = await fetch('database.php?action=signup', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+        if (response.ok && result.success) {
+          alert(result.message || 'Account created successfully');
+          switchTab('login');
+        } else {
+          alert(result.error || 'Signup failed');
+        }
+      });
+    }
   });
 
 })();
