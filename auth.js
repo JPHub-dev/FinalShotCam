@@ -69,17 +69,22 @@
     if (login) {
       login.addEventListener('submit', async (e)=>{
         e.preventDefault();
-        const formData = new FormData(login);
-        const response = await fetch('database.php?action=login', {
-          method: 'POST',
-          body: formData,
-        });
-        const result = await response.json();
-        if (response.ok && result.success) {
-          alert(result.message || 'Logged in successfully');
-          window.location.href = 'index.html';
-        } else {
-          alert(result.error || 'Login failed');
+        try {
+          const formData = new FormData(login);
+          const response = await fetch('database.php?action=login', {
+            method: 'POST',
+            body: formData,
+          });
+          const result = await response.json();
+          if (response.ok && result.success) {
+            alert(result.message || 'Logged in successfully');
+            window.location.href = 'index.html';
+          } else {
+            alert(result.error || 'Login failed');
+          }
+        } catch (error) {
+          console.error("Error login:", error);
+          alert("Terjadi kesalahan koneksi atau database.php bermasalah.");
         }
       });
     }
@@ -88,17 +93,22 @@
     if (signup) {
       signup.addEventListener('submit', async (e)=>{
         e.preventDefault();
-        const formData = new FormData(signup);
-        const response = await fetch('database.php?action=signup', {
-          method: 'POST',
-          body: formData,
-        });
-        const result = await response.json();
-        if (response.ok && result.success) {
-          alert(result.message || 'Account created successfully');
-          switchTab('login');
-        } else {
-          alert(result.error || 'Signup failed');
+        try {
+          const formData = new FormData(signup);
+          const response = await fetch('database.php?action=signup', {
+            method: 'POST',
+            body: formData,
+          });
+          const result = await response.json();
+          if (response.ok && result.success) {
+            alert(result.message || 'Account created successfully');
+            switchTab('login'); // Kembali ke tab login setelah sukses
+          } else {
+            alert(result.error || 'Signup failed');
+          }
+        } catch (error) {
+          console.error("Error signup:", error);
+          alert("Terjadi kesalahan koneksi atau database.php bermasalah.");
         }
       });
     }
