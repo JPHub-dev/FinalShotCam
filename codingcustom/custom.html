@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customize Photo</title>
+
+    <link rel="stylesheet"
+          href="custom.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+          rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="custom-box">
+
+        <h1>CUSTOMIZE YOUR PHOTO !</h1>
+
+        <div class="content">
+
+            <!-- PREVIEW -->
+
+            <div class="preview-section">
+
+                <div class="frame-card">
+
+                    <div id="framePreview"></div>
+
+                    <div id="captionPreview"></div>
+                    
+                </div>
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div class="setting-section">
+
+                <label class="caption-label">
+                    FRAME COLOR
+                </label>
+
+                <input type="color"
+                       id="frameColor"
+                       value="#ffffff"
+                >
+
+                <label class="caption-label">
+                    WHAT ARE YOU THINKING ABOUT?
+                </label>
+
+                <input type="text"
+                    id="captionInput"
+                    maxlength="50"
+                    placeholder="Write something..."
+                >
+
+                <div id="counter">
+                    0/50
+                </div>
+
+            </div>
+            
+
+        </div>
+
+        <button class="next-btn">
+            NEXT >
+        </button>
+
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Frame</title>
+
+    <link rel="stylesheet" href="frame.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="frame-box">
+
+        <!-- BACK -->
+        <button class="back-btn">
+            &lt; Back
+        </button>
+
+        <!-- TITLE -->
+        <h1>PICK YOUR FORMAT</h1>
+
+        <!-- CAROUSEL -->
+        <div class="carousel-container">
+
+            <!-- LEFT -->
+            <button class="arrow-btn left" id="prevBtn">
+                &#10094;
+            </button>
+
+            <div class="carousel-wrapper">
+
+                <div class="carousel" id="carousel">
+
+                    <!-- ==================== -->
+                    <!-- PAGE 1 -->
+                    <!-- ==================== -->
+
+                    <div class="carousel-page">
+
+                        <!-- 2x2 -->
+
+                        <div class="frame-card a5-card" data-frame="2x2">
+
+                            <div class="frame-preview frame-2x2">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- 2x3 -->
+
+                        <div class="frame-card a5-card" data-frame="2x3">
+
+                            <div class="frame-preview frame-2x3">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==================== -->
+                    <!-- PAGE 2 -->
+                    <!-- ==================== -->
+
+                    <div class="carousel-page">
+
+                        <!-- STRIP 4 -->
+
+                        <div class="frame-card strip-card" data-frame="strip4">
+
+                            <div class="frame-preview frame-strip4">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- STRIP 3 -->
+
+                        <div class="frame-card strip-card" data-frame="strip3">
+
+                            <div class="frame-preview frame-strip3">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <button class="arrow-btn right" id="nextBtn">
+                &#10095;
+            </button>
+
+        </div>
+
+        <!-- NEXT -->
+
+        <button class="next-btn" id="nextPageBtn">
+            NEXT >
+        </button>
+
+    </div>
+
+    <script src="frame.js"></script>
+
+</body>
+
+</html>
